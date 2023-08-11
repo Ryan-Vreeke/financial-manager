@@ -13,10 +13,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MoneyManager
-build_property.ProjectDir = /home/ryan/Projects/MoneyManager/
+build_property.ProjectDir = /home/ryan/Projects/financial-manager/
 
-[/home/ryan/Projects/MoneyManager/App.axaml]
+[/home/ryan/Projects/financial-manager/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/ryan/Projects/MoneyManager/Views/MainWindow.axaml]
+[/home/ryan/Projects/financial-manager/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

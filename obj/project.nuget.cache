@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tikEjTR78KddTzdRiU+81o4ZN5SJ3Dc0PL3hx1G0++VsSLbOdA17G5JDO/nnHyUvMpW/nkgyBn+Ndhf4VraMNg==",
+  "dgSpecHash": "7GlTz9ECZbJ+VLKvEkDa3F+6v1KOYBPCARzn8WLWGvH6C2nI/WyhfwAwKCUDKCLiB3wBjH48NUJG6eQYnh96lA==",
   "success": true,
-  "projectFilePath": "/home/ryan/Projects/MoneyManager/MoneyManager.csproj",
+  "projectFilePath": "/home/ryan/Projects/financial-manager/MoneyManager.csproj",
   "expectedPackageFiles": [
     "/home/ryan/.nuget/packages/avalonia/11.0.2/avalonia.11.0.2.nupkg.sha512",
     "/home/ryan/.nuget/packages/avalonia.angle.windows.natives/2.1.0.2023020321/avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",

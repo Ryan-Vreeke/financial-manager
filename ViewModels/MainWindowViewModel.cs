@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using MoneyManager.Models;
+using System.Collections.Generic;
 
 namespace MoneyManager.ViewModels;
 
@@ -21,7 +22,8 @@ public class MainWindowViewModel : ViewModelBase
     Types = GenereateTree();
   }
 
-  private ObservableCollection<Type> GenereateTree(){
+  private ObservableCollection<Type> GenereateTree()
+  {
     ObservableCollection<Type> typeList = new();
     foreach (string type in _transactions.Select(t => t.Type).Distinct())
     {
@@ -58,30 +60,30 @@ public class MainWindowViewModel : ViewModelBase
   }
 
   private object? _selected = null;
-  public object? Selected{
+  public object? Selected
+  {
     get => _selected;
     set => this.RaiseAndSetIfChanged(ref _selected, value);
   }
-  
 
-  public void Add(){
-  }
+  public void Add() { }
 
-  public void Remove(){
-    switch(Selected){
-      case Type type: 
-        var allOfType = _transactions.Where(t => t.Type == type.TypeName).Distinct();
-        foreach(var current in allOfType){
-          _transactions.Remove(current);
-        }
+  public void Remove()
+  {
+    switch (Selected)
+    {
+      case Type type:
+        var noTypeList = _transactions.ToList();
+        noTypeList.RemoveAll(x => x.Type == type.TypeName);
+        _transactions = new ObservableCollection<Transaction>(noTypeList);
         break;
       case Transaction transaction:
         _transactions.Remove(transaction);
-        Types = GenereateTree();
         break;
       default:
         return;
     }
+    Types = GenereateTree();
   }
 
   public void ToggleDock()
