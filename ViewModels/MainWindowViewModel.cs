@@ -1,8 +1,9 @@
 ﻿using ReactiveUI;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using MoneyManager.Models;
-using System.Collections.Generic;
+using Type = MoneyManager.Models.Type;
 
 namespace MoneyManager.ViewModels;
 
@@ -66,7 +67,11 @@ public class MainWindowViewModel : ViewModelBase
     set => this.RaiseAndSetIfChanged(ref _selected, value);
   }
 
-  public void Add() { }
+  public event EventHandler ShowDialogRequest;
+  public void Add()
+  {
+    ShowDialogRequest?.Invoke(this, EventArgs.Empty);
+  }
 
   public void Remove()
   {
